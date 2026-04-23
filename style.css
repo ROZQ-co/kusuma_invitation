@@ -1,0 +1,75 @@
+:root {
+    --gold: #d4a373;
+    --cream: #fdf5e6;
+    --dark: #3e2723;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    text-align: center;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* Overlay / Layar Pembuka */
+#overlayer {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--dark);
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/natural-paper.png');
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease-in-out;
+}
+
+.btn-open {
+    padding: 15px 40px;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Hero & Content */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+h1 { font-family: 'Great Vibes', cursive; font-size: clamp(3rem, 10vw, 5rem); color: var(--gold); margin: 10px 0; }
+.sub-title { font-family: 'Cinzel', serif; letter-spacing: 5px; text-transform: uppercase; }
+
+.guest-box, .guest-info { margin: 20px auto; padding: 10px 25px; border: 1px solid var(--gold); border-radius: 8px; background: rgba(0,0,0,0.3); display: inline-block; }
+#guest-name, #guest-name-overlay { font-family: 'Cinzel', serif; color: var(--gold); margin: 5px 0; }
+
+/* Ornamen */
+.ornamen-top, .ornamen-bottom {
+    position: absolute; width: 150px; height: 150px;
+    background: url('https://www.transparentpng.com/download/gold-ornament/fancy-gold-decorative-ornament-png-12.png') no-repeat center/contain;
+}
+.ornamen-top { top: 20px; left: 20px; }
+.ornamen-bottom { bottom: 20px; right: 20px; transform: rotate(180deg); }
+
+.gunungan {
+    width: 100px; height: 150px; margin: 0 auto 20px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Wayang_Kulit_Gunungan.svg/1200px-Wayang_Kulit_Gunungan.svg.png') center/contain no-repeat;
+}
+
+/* Card & Gallery */
+.event-card { background: white; padding: 30px; margin: 15px; border: 2px solid var(--gold); border-radius: 30px 0; display: inline-block; width: 280px; }
+.gallery { padding: 60px 20px; }
+.gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 40px auto; }
+.gallery-item img { width: 100%; height: 250px; object-fit: cover; border: 5px solid white; border-radius: 10px; }
